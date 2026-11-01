@@ -1,0 +1,77 @@
+/* Katalog Buku - tema coklat hangat (tanpa variabel CSS / gap agar tampil sama di browser lama) */
+* { box-sizing: border-box; }
+body { margin: 0; background: #efe6da; color: #3a2a1f;
+       font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; font-size: 15px; line-height: 1.5; }
+
+/* ---------- Bilah atas ---------- */
+.topbar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+          background: #4a2f1d; border-bottom: 3px solid #b98a4e; padding: 14px 32px; }
+.brand { font-family: Georgia, "Times New Roman", serif; font-size: 23px; letter-spacing: .5px; color: #f6ead8; }
+.menu { display: flex; align-items: center; }
+.lang { margin-right: 18px; }
+.lang a { color: #d9c3a5; text-decoration: none; font-size: 13px; padding: 3px 9px; margin-left: 2px;
+          border: 1px solid transparent; border-radius: 2px; }
+.lang a.aktif { color: #4a2f1d; background: #e8d3b0; font-weight: 600; }
+.user { color: #e9d9c2; font-size: 14px; margin-right: 16px; }
+.user strong { color: #fff6e6; font-weight: 600; }
+
+/* ---------- Konten ---------- */
+.konten { max-width: 1080px; margin: 30px auto 0; padding: 0 20px; min-height: 68vh; }
+.kepala-halaman { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; margin-bottom: 16px; }
+.judul-halaman { font-family: Georgia, "Times New Roman", serif; font-weight: normal; font-size: 28px; color: #3a2415;
+                 margin: 0 0 2px; }
+.subjudul { margin: 0 0 4px; color: #86705c; font-style: italic; font-size: 14px; }
+.panel { background: #fbf7f0; border: 1px solid #d8c8b0; border-radius: 3px; padding: 22px 24px; }
+.panel-form { max-width: 640px; }
+.panel-login { max-width: 400px; margin: 64px auto; border-top: 4px solid #6b4429; }
+
+/* ---------- Form ---------- */
+label { display: block; font-size: 13px; font-weight: 600; letter-spacing: .3px; color: #5a3d28; margin: 16px 0 5px; }
+input[type=text], input[type=password], select {
+    width: 100%; padding: 9px 11px; background: #fffdf9; color: #3a2a1f; font-size: 15px;
+    border: 1px solid #cdbba2; border-radius: 3px; }
+input[type=text]:focus, input[type=password]:focus, select:focus { outline: none; border-color: #8a5a34; background: #fff; }
+.petunjuk { display: block; margin-top: 4px; font-size: 12.5px; color: #8a7561; }
+.tombol-form { margin-top: 24px; }
+
+/* ---------- Tombol ---------- */
+.btn { display: inline-block; padding: 9px 18px; background: #6b4429; color: #fbf3e6; border: 1px solid #6b4429;
+       border-radius: 3px; font-size: 14px; text-decoration: none; cursor: pointer; font-family: inherit; }
+.btn:hover { background: #4a2f1d; border-color: #4a2f1d; }
+.btn-polos { background: transparent; color: #6b4429; border-color: #bfa98d; margin-left: 6px; }
+.btn-polos:hover { background: #efe3d1; color: #4a2f1d; border-color: #6b4429; }
+.btn-garis { background: transparent; color: #f6ead8; border-color: #a98a65; padding: 5px 14px; font-size: 13px; }
+.btn-garis:hover { background: #5e3d27; border-color: #d9c3a5; }
+.btn-kecil { padding: 4px 11px; font-size: 13px; }
+.btn-bahaya { background: transparent; color: #9c3b27; border-color: #c98f82; margin-left: 4px; }
+.btn-bahaya:hover { background: #9c3b27; color: #fff; border-color: #9c3b27; }
+
+/* ---------- Pencarian & tabel ---------- */
+.cari { display: flex; margin-bottom: 18px; }
+.cari input { width: 340px; max-width: 100%; margin-right: 8px; }
+.tabel-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+th { background: #6b4429; color: #f6ead8; text-align: left; padding: 10px 12px; font-size: 12.5px;
+     letter-spacing: .8px; text-transform: uppercase; font-weight: 600; white-space: nowrap; }
+td { padding: 11px 12px; border-bottom: 1px solid #e4d7c4; vertical-align: middle; }
+tbody tr:nth-child(even) td { background: #f5ede1; }
+tbody tr:hover td { background: #efe2cc; }
+td.isbn { font-family: Consolas, "Courier New", monospace; font-size: 13px; color: #6f5a47; white-space: nowrap; }
+td.judul-buku { font-family: Georgia, "Times New Roman", serif; font-size: 15.5px; color: #3a2415; }
+td.kosong { text-align: center; color: #86705c; padding: 26px; font-style: italic; }
+td.aksi { white-space: nowrap; }
+td.aksi form { display: inline; }
+.tag { display: inline-block; padding: 1px 9px; font-size: 12.5px; color: #6b4429; background: #f1e2c8;
+       border: 1px solid #d9bd90; border-radius: 2px; white-space: nowrap; }
+.total { margin: 14px 0 0; font-size: 13.5px; color: #86705c; }
+.total strong { color: #4a2f1d; }
+
+/* ---------- Pesan ---------- */
+.alert { padding: 11px 16px; margin-bottom: 16px; border-radius: 3px; font-size: 14px; border-left-width: 4px; border-left-style: solid; }
+.alert-sukses { background: #eef0dc; border: 1px solid #c8cd9c; border-left: 4px solid #7d8a35; color: #44511a; }
+.alert-error { background: #f8e6e1; border: 1px solid #e0b3a9; border-left: 4px solid #a3402c; color: #7d2a1b; }
+.alert ul { margin: 0; padding-left: 18px; }
+
+/* ---------- Kaki ---------- */
+.footer { max-width: 1080px; margin: 34px auto 0; padding: 16px 20px 24px; border-top: 1px solid #d3c1a7;
+          text-align: center; color: #86705c; font-size: 13px; letter-spacing: .5px; }
